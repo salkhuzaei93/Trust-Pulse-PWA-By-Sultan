@@ -1,0 +1,30 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next
+.next
+out
+
+# env
+.env
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# prisma
+prisma/dev.db
+
+# playwright
+playwright-report
+playwright/.cache
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.DS_Store

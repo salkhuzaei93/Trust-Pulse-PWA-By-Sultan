@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: trustpulse-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-trustpulse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-trustpulse}
+      POSTGRES_DB: ${POSTGRES_DB:-trustpulse}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
